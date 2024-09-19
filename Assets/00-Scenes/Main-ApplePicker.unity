@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 792234108}
   - component: {fileID: 792234107}
   - component: {fileID: 792234106}
+  - component: {fileID: 792234109}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -214,6 +215,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792234109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792234105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efea44bcf5d2b4fccbf0ea1130171116, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 633786272128517144, guid: 1f311c5ae63bf42f1a573d357d92bab2, type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!1 &1572004184
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,9 +333,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4214480786666095131, guid: 75973e53319de44a2a36d96315565251, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -4214480786666095131, guid: 75973e53319de44a2a36d96315565251, type: 3}
+      propertyPath: applePrefab
+      value: 
+      objectReference: {fileID: 3204022623633940397, guid: 46439fb9ae90e42f98f3e56572904cea, type: 3}
     - target: {fileID: 1918167790099038864, guid: 75973e53319de44a2a36d96315565251, type: 3}
       propertyPath: m_Name
       value: AppleTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209738087764335651, guid: 75973e53319de44a2a36d96315565251, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6218257956132211350, guid: 75973e53319de44a2a36d96315565251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -326,7 +355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6218257956132211350, guid: 75973e53319de44a2a36d96315565251, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6218257956132211350, guid: 75973e53319de44a2a36d96315565251, type: 3}
       propertyPath: m_LocalPosition.z

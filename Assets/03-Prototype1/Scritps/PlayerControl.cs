@@ -37,18 +37,29 @@ public class PlayerControl : MonoBehaviour
         rb.AddForce(movement * speed);
         
     }
+  
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Pick up"))
         {
             other.gameObject.SetActive(false);
-            count = count + 1;
+            count += 1;
             SetCountText();
 
         }
 
     }
+
+    void OnCollisionEnter(Collision coll)
+    {
+        GameObject collidedWith = coll.gameObject;
+        if (collidedWith.tag == "Bomb")
+        {
+            Destroy(collidedWith);
+        }
+    }
+
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();

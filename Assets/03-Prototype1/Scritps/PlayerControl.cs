@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour
     public Text countText;
 
     public Text winText;
+    public Text loseText;
 
 
     private Rigidbody rb;
@@ -24,6 +25,8 @@ public class PlayerControl : MonoBehaviour
         count = 0;
         SetCountText();
         winText.text = "";
+        loseText.text = "";
+        
     }
 
     // Update is called once per frame
@@ -48,8 +51,11 @@ public class PlayerControl : MonoBehaviour
             SetCountText();
 
         }
+    
 
     }
+
+   
 
     void OnCollisionEnter(Collision coll)
     {
@@ -57,6 +63,8 @@ public class PlayerControl : MonoBehaviour
         if (collidedWith.tag == "Bomb")
         {
             Destroy(collidedWith);
+            count -= 1;
+            SetCountText();
         }
     }
 
@@ -66,6 +74,10 @@ public class PlayerControl : MonoBehaviour
         if (count>= 14)
         {
             winText.text = "You Win";
+        }
+        if (count<= -10)
+        {
+            loseText.text = "YOU LOSE!";
         }
     }
 }

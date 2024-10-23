@@ -7,10 +7,14 @@ public class Baloon : MonoBehaviour
 
     public GameObject BombPrefab;
 
+    public GameObject BaloonPrefab;
+
     public float speed = 1f;
 
 
     public float leftAndRightEdge = 7f;
+
+
 
     public float chanceToChangeDirections = 1f;
 
@@ -51,6 +55,11 @@ public class Baloon : MonoBehaviour
 
 
 
+
+    }
+    public void FixedUpdate()
+    {
+        transform.position += transform.forward * Time.deltaTime * speed;
 
     }
 

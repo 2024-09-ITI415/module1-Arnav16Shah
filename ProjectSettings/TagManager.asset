@@ -9,6 +9,7 @@ TagManager:
   - Pickup
   - Pick up
   - Bomb
+  - Baloon
   layers:
   - Default
   - TransparentFX
